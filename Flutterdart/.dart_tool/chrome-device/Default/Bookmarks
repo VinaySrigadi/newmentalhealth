@@ -1,0 +1,93 @@
+{
+   "checksum": "4eb0210cc0a8fa312866d70a44cb6f1a",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13276660820264679",
+               "date_last_used": "0",
+               "guid": "2aa14092-663f-459e-98c7-1820ddd0ed50",
+               "id": "8",
+               "name": "Dell",
+               "type": "url",
+               "url": "http://www1.ap.dell.com/content/default.aspx?c=in&l=en&s=gen"
+            }, {
+               "date_added": "13276660820266571",
+               "date_last_used": "0",
+               "guid": "bd58bb27-4c75-4ca7-a542-bd53442158cc",
+               "id": "9",
+               "name": "Support.Dell.Com",
+               "type": "url",
+               "url": "http://www.dell.com/support/home"
+            } ],
+            "date_added": "13289291796998328",
+            "date_last_used": "0",
+            "date_modified": "13289291796998328",
+            "guid": "b915ee26-8d2d-47af-8b63-fb27d5706c08",
+            "id": "7",
+            "name": "Dell",
+            "type": "folder"
+         }, {
+            "date_added": "13276868391665110",
+            "date_last_used": "0",
+            "guid": "b0bb8b52-1105-4281-ab85-7c9a8beba65d",
+            "id": "10",
+            "name": "Gmail",
+            "type": "url",
+            "url": "https://accounts.google.com/b/0/AddMailService"
+         }, {
+            "date_added": "13276868391666409",
+            "date_last_used": "0",
+            "guid": "eb7164d6-4141-47d9-80c3-242f3ede40f5",
+            "id": "11",
+            "name": "YouTube",
+            "type": "url",
+            "url": "https://youtube.com/"
+         }, {
+            "date_added": "13276880339658196",
+            "date_last_used": "0",
+            "guid": "6a467706-b319-4f06-818b-e720346bf30c",
+            "id": "12",
+            "name": "Monkeytype",
+            "type": "url",
+            "url": "https://monkeytype.com/"
+         }, {
+            "date_added": "13314107378879525",
+            "date_last_used": "0",
+            "guid": "7a2fc6b6-1358-4edb-abcc-0350668a4465",
+            "id": "13",
+            "name": "Thank you for downloading IntelliJ IDEA!",
+            "type": "url",
+            "url": "https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows&code=IIC"
+         } ],
+         "date_added": "13352754180152396",
+         "date_last_used": "0",
+         "date_modified": "13314107378879525",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13352754180152399",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13352754180152400",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

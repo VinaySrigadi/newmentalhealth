@@ -1,0 +1,59 @@
+name: treesa_s_application2
+description: A new Flutter project.
+version: 1.0.0+1
+environment: 
+  sdk: '>=2.12.0 <3.0.0'
+dependencies: 
+  flutter: 
+    sdk: flutter
+  http: ^1.2.0
+  shared_preferences: ^2.2.2
+  cached_network_image: ^3.3.0
+  flutter_svg: ^2.0.9
+  intl: ^0.18.0
+  pin_code_fields: ^8.0.1
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+flutter: 
+  uses-material-design: true
+  assets: 
+    - assets/
+    - assets/images/
+  fonts: 
+    - family: Lato
+      fonts: 
+        - asset: assets/fonts/LatoBold.ttf
+          weight: 700
+        - asset: assets/fonts/LatoRegular.ttf
+          weight: 400
+    - family: Epilogue
+      fonts: 
+        - asset: assets/fonts/EpilogueMedium.ttf
+          weight: 400
+        - asset: assets/fonts/EpilogueSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/EpilogueBold.ttf
+          weight: 700
+        - asset: assets/fonts/EpilogueExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/EpilogueRegular.ttf
+          weight: 400
+    - family: Alegreya
+      fonts: 
+        - asset: assets/fonts/AlegreyaMedium.ttf
+          weight: 500
+    - family: Rubik
+      fonts: 
+        - asset: assets/fonts/RubikRomanRegular.ttf
+          weight: 400
+        - asset: assets/fonts/RubikRomanMedium.ttf
+          weight: 500
+    - family: DM Sans
+      fonts: 
+        - asset: assets/fonts/DMSansBold.ttf
+          weight: 700
+        - asset: assets/fonts/DMSansMedium.ttf
+          weight: 500
+        - asset: assets/fonts/DMSansRegular.ttf
+          weight: 400

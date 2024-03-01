@@ -1,0 +1,110 @@
+{
+   "checksum": "834fa40a8668a6a5e8eeccb77c0a7655",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13276660820264679",
+               "date_last_used": "0",
+               "guid": "2aa14092-663f-459e-98c7-1820ddd0ed50",
+               "id": "8",
+               "name": "Dell",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://www1.ap.dell.com/content/default.aspx?c=in&l=en&s=gen"
+            }, {
+               "date_added": "13276660820266571",
+               "date_last_used": "0",
+               "guid": "bd58bb27-4c75-4ca7-a542-bd53442158cc",
+               "id": "9",
+               "name": "Support.Dell.Com",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://www.dell.com/support/home"
+            } ],
+            "date_added": "13289291796998328",
+            "date_last_used": "0",
+            "date_modified": "13289291796998328",
+            "guid": "b915ee26-8d2d-47af-8b63-fb27d5706c08",
+            "id": "7",
+            "name": "Dell",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "date_added": "13276868391665110",
+            "date_last_used": "0",
+            "guid": "b0bb8b52-1105-4281-ab85-7c9a8beba65d",
+            "id": "10",
+            "name": "Gmail",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://accounts.google.com/b/0/AddMailService"
+         }, {
+            "date_added": "13276868391666409",
+            "date_last_used": "0",
+            "guid": "eb7164d6-4141-47d9-80c3-242f3ede40f5",
+            "id": "11",
+            "name": "YouTube",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://youtube.com/"
+         }, {
+            "date_added": "13276880339658196",
+            "date_last_used": "0",
+            "guid": "6a467706-b319-4f06-818b-e720346bf30c",
+            "id": "12",
+            "name": "Monkeytype",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://monkeytype.com/"
+         }, {
+            "date_added": "13314107378879525",
+            "date_last_used": "0",
+            "guid": "7a2fc6b6-1358-4edb-abcc-0350668a4465",
+            "id": "13",
+            "name": "Thank you for downloading IntelliJ IDEA!",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows&code=IIC"
+         } ],
+         "date_added": "13352754180152396",
+         "date_last_used": "0",
+         "date_modified": "13314107378879525",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13352754180152399",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13352754180152400",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCExFdb2NAQAAEgAgASoYOFhyeHd1aW85b1RNNjlnMmhKMXpIdz09oAYMEqgBCA0SowEKHEkxVGc2T0hTSTRORnRPQ0g5NDFaRERsT0RqND0SJDdhMmZjNmI2LTEzNTgtNGVkYi1hYmNjLTAzNTA2NjhhNDQ2NRgAIAAoADDwouGC1DA4zKPhgtQwQMyj4YLUMEocMGQzZ29BZUx5ZlRoUjhYcmZqTHpQSHIwUlgwPVofIh3uNHphc2w0QXVTZTNudlQxcXoveHpXWmNRdXJBPWUAAAAAEqgBCAwSowEKHEI3eVJjUHg3YlpoMFkrWkNGY1VjL0xmbVlpMD0SJDZhNDY3NzA2LWIzMTktNGYwNi04MThiLWU3MjAzNDZiZjMwYxgAIAIoAjDLitXr2zE47KPhgtQwQL7o1OvbMUoccFljZHM1SVlSMzhmbllJOHlsaDU0eDRRUGVJPVofIh3cWkY2VUpDT3VvNG9URGlXRkxBVnVSb0x0bGZ3PWX6chHaEqcBCAoSogEKHHQ3bTZ3STdwNjJmbUJaTS8vbFNxUmlTUmt4MD0SJGIwYmI4YjUyLTExMDUtNDI4MS1hYjg1LTdjOWE4YmViYTY1ZBgAIAIoAjDKitXr2zE4raPhgtQwQL3o1OvbMUocbC9CUVhJa1I5OGRTVitFbEdEekdTbnFRaU9JPVoeIhxwaGQ0NHA1Qko4c3IxMlBoUkVTVnE5REc2SDA9ZYugjNESiQEIARKEAQoceXhKLzZmdmtlY3I3a3A1RVF6QjR0V0xwZGJFPRIkMzJjMTg0MzktNGE1Yy01ODBkLWFkN2EtYzhhNGM4N2U4NzlmGAAgACgAMMTu59nLLzjlwcjV5y9A5cHI1ecvShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAABKoAQgLEqMBChxMczQwZTcwNDhZTU9GKzhpdWI4bERHdkx2dDQ9EiRlYjcxNjRkNi00MTQxLTQ3ZDktODBjMy0yNDJmM2VkZTQwZjUYACACKAIwyYrV69sxOIil4YLUMEC96NTr2zFKHGpZY3FaK3ZHMytpWklXZHVoQXNWOUxOSDFVVT1aHyIduDBZYjVSWW1xZzJQQXJRdC8vaHVYRXhjaG5mRT1lOPk5MxKJAQgDEoQBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiQ5MWE0MzI0OC1lNjExLTU4NTYtODQxMC01MzY2NmZlZDU4ZjAYACAAKAAwxO7n2csvOKTHyNXnL0Ckx8jV5y9KHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAEqcBCAgSogEKHHBNeElrTk50YnFnNC9CZXcyQk4zU3ptY3FYbz0SJDJhYTE0MDkyLTY2M2YtNDU5ZS05OGM3LTE4MjBkZGQwZWQ1MBgAIAAoADDzouGC1DA42aThgtQwQNmk4YLUMEocSk53RU5TWTZpOVlwaERNVDlBVS9xd0FKN1JjPVoeIhxRZE8zT1JNTmpWUVlMRlBUcHh2M2pPbG1kRWs9Zb9g/nESpwEIBxKiAQocQUE4M0QraE9TelpGWTM2MERlenpYYnFpajI0PRIkYjkxNWVlMjYtOGQyZC00N2FmLThiNjMtZmIyN2Q1NzA2YzA4GAAgACgAMPKi4YLUMDi6pOGC1DBAuqThgtQwShw3UXFhUDRqcjJSLzFnUUN4TVhDSXA3N3FYcWM9Wh4iHGExSjdjZ0J1SFZrcVk2SVQ4d2lkbkxBYWxuST1lAAAAABKnAQgJEqIBChw5aFZndG1Qd2V1REVBOHg0MnFoQkVrc2NPNTQ9EiRiZDU4YmIyNy00Yzc1LTRjYTctYTU0Mi1iZDUzNDQyMTU4Y2MYACAAKAAw9KLhgtQwOPik4YLUMED4pOGC1DBKHHpXZEJhbThpdzBPVDN1OVYrc2xRTGk0UmM2OD1aHiIcdkRhTW9IcjA5eHZpL3dmendTNFhFT09IdmRNPWW/YP5xEokBCAIShAEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SJGYxMTcyY2UwLWY0MjEtNTU0MC05YTI0LWYxNmE1NDBlMWE5NBgAIAAoADDE7ufZyy84vsnI1ecvQL7JyNXnL0ocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAAAwADgA",
+   "version": 1
+}
