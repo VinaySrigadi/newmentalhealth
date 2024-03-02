@@ -1,0 +1,6 @@
+for _pycache = flask --app app run
+
+for active flask_Mail (env) in Windows:
+pip install virtualenv
+py -m venv env
+.\env\Scripts\activate
