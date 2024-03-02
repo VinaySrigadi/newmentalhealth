@@ -9,8 +9,8 @@
 /ios/Podfile
 /pubspec.lock
 
-/Flask/__pycache__/
-/Flask/env/
+/FlaskV2/__pycache__/
+/FlaskV2/env/
 env/
 .vscode/
 *.json
