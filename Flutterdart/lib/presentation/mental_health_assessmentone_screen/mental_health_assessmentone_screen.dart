@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:treesa_s_application2/presentation/mental_health_assessmentfourth_screen/mental_health_assessmentfourth_screen.dart';
-import '../mental_health_assessmentone_screen/widgets/mentalhealthassessmentoneframe_item_widget.dart';
+// import 'package:treesa_s_application2/presentation/mental_health_assessmentfourth_screen/mental_health_assessmentfourth_screen.dart';
+// import '../mental_health_assessmentone_screen/widgets/mentalhealthassessmentoneframe_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:treesa_s_application2/core/app_export.dart';
 import 'package:treesa_s_application2/widgets/app_bar/appbar_leading_iconbutton_one.dart';
@@ -9,6 +9,7 @@ import 'package:treesa_s_application2/widgets/app_bar/appbar_title.dart';
 import 'package:treesa_s_application2/widgets/app_bar/appbar_trailing_button_one.dart';
 import 'package:treesa_s_application2/widgets/app_bar/custom_app_bar.dart';
 import 'package:treesa_s_application2/widgets/custom_elevated_button.dart';
+import 'package:treesa_s_application2/presentation/mental_healthtwo_screen/mental_healthtwo_screen.dart';
 
 class MentalHealthAssessmentoneScreen extends StatefulWidget {
    final String username;
@@ -16,22 +17,7 @@ class MentalHealthAssessmentoneScreen extends StatefulWidget {
   final String imagePath;
   const MentalHealthAssessmentoneScreen({required this.text, required this.imagePath, required this.username});
 
-  
-Future<void> storeUserData(String username, String text) async {
-  final url = 'http://127.0.0.1:5000/moodtrack';
-  final headers = {'Content-Type': 'application/json'};
-  final body = json.encode({'username': username, 'text': text});
-
-  try {
-    final response = await http.post(url as Uri, headers: headers, body: body);
-    if (response.statusCode != 201) {
-      throw Exception('Failed to store user data');
-    }
-  } catch (e) {
-    // Handle the error
-    print(e);
-  }
-}
+ 
 
   @override
   _MentalHealthAssessmentoneScreenState createState() => _MentalHealthAssessmentoneScreenState();
@@ -43,17 +29,20 @@ Future<void> storeUserData(String username, String text) async {
 
 class _MentalHealthAssessmentoneScreenState extends State<MentalHealthAssessmentoneScreen> {
  int _selectedIndex = 0;
+ String _selectedText = "";
 
-  void onTapText(int index,String text) {
+  void onTapText(String text) {
     setState(() {
-      _selectedIndex = index;
+      // _selectedIndex = index;
+         _selectedText = text;
     }
    
     );
-     print(text);
+     print(_selectedText);
+
 
   }
-
+ 
 
  
   @override
@@ -88,7 +77,7 @@ class _MentalHealthAssessmentoneScreenState extends State<MentalHealthAssessment
                       buttonStyle: CustomButtonStyles.fillGrayTL28,
                       buttonTextStyle: theme.textTheme.titleMedium!,
                       onPressed: () {
-                        onTapContinue(context);
+                        onTapContinue(context, _selectedText, widget.username);
                       }, onTap: () async{  },),
                   SizedBox(height: 5.v)
                 ]))));
@@ -115,14 +104,8 @@ class _MentalHealthAssessmentoneScreenState extends State<MentalHealthAssessment
   /// Section Widget
 /// Section Widget
 Widget _buildMentalHealthAssessmentOneFrame(BuildContext context) {
-  return ListView.separated(
-    physics: NeverScrollableScrollPhysics(),
-    shrinkWrap: true,
-    separatorBuilder: (context, index) {
-      return SizedBox(height: 12.v);
-    },
-    itemCount: 5, // Change this to 5
-    itemBuilder: (context, index) {
+  return Column(
+    children: List.generate(5, (index) {
       String text = "";
       String imagePath = "";
 
@@ -147,23 +130,37 @@ Widget _buildMentalHealthAssessmentOneFrame(BuildContext context) {
           text = "I want to manage anger";
           imagePath = ImageConstant.imgTelevision;
           break;
-        default:
-          text = "";
-          imagePath = "";
+         
       }
 
-      return  MentalhealthassessmentoneframeItemWidget(
-        text: text,
-        imagePath: imagePath,
-        onTapText: () {
-          onTapText(index,text);
+      return RadioListTile<int>(
+        value: index,
+        groupValue: _selectedIndex,
+        onChanged: (int? value) {
+          setState(() {
+            _selectedIndex = value!;
+             onTapText(text);
+          });
         },
-          selected: _selectedIndex == index,
-           color: _selectedIndex == index ? Colors.orange : Colors.blue, // Change this line
-      
-       
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CustomImageView(
+              imagePath: imagePath,
+              height: 24.adaptSize,
+              width: 24.adaptSize,
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 8.h, bottom: 2.v),
+              child: Text(
+                text,
+                style: CustomTextStyles.titleMediumBold,
+              ),
+            ),
+          ],
+        ),
       );
-    },
+    }),
   );
 }
   /// Navigates to the homeScreen when the action is triggered.
@@ -172,7 +169,34 @@ Widget _buildMentalHealthAssessmentOneFrame(BuildContext context) {
   }
 
   /// Navigates to the mentalHealthAssessmentsevenScreen when the action is triggered.
-  // onTapContinue(BuildContext context) {
-  //   Navigator.pushNamed(context, AppRoutes.mentalhealthassessmentfourteenScreen);
-  // }
+  Future<void> onTapContinue(BuildContext context,String selectedText, String username)async {
+
+
+//  storeUserData(String username, String text) async {
+  final url = 'http://127.0.0.1:5000/moodtrack';
+  final headers = {'Content-Type': 'application/json'};
+  final body = json.encode({'username': username, 'text': selectedText});
+
+  try {
+    final response = await http.post(Uri.parse(url), headers: headers, body: body);
+    if (response.statusCode == 200) {
+ Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => MentalHealthAssessmentwoScreen(username: username),
+        ),
+        );
+  print("Updated");
+
+
+      // throw Exception('updated');
+    }
+  } catch (e) {
+    // Handle the error
+    print(e);
+  }
 }
+
+
+
+  }

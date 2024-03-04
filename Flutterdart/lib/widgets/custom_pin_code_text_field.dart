@@ -27,7 +27,7 @@ class CustomPinCodeTextField extends StatelessWidget {
 
   final TextStyle? hintStyle;
 
-  Function(String) onChanged;
+  final Function(String) onChanged;
 
   final FormFieldValidator<String>? validator;
 

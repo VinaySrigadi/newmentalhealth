@@ -280,107 +280,168 @@ class SessionsScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildBottomBar(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: theme.colorScheme.onPrimaryContainer.withOpacity(1),
-        boxShadow: [
-          BoxShadow(
-            color: appTheme.black90001.withOpacity(0.11),
-            spreadRadius: 2.h,
-            blurRadius: 2.h,
-            offset: Offset(
-              0,
-              4,
-            ),
+  /// 
+  /// 
+
+Widget _buildBottomBar(BuildContext context) {
+  return Container(
+    decoration: BoxDecoration(
+      color: theme.colorScheme.onPrimaryContainer.withOpacity(1),
+      boxShadow: [
+        BoxShadow(
+          color: appTheme.black90001.withOpacity(0.11),
+          spreadRadius: 2.h,
+          blurRadius: 2.h,
+          offset: Offset(0, 4),
+        ),
+      ],
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Expanded(
+          child: CustomImageView(
+            imagePath: ImageConstant.imgHome,
+            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
+            onTap: () {
+              Navigator.pushNamed(context, '/home_screen');
+            },
           ),
-        ],
-      ),
-      child: Padding(
-        padding: EdgeInsets.only(
-          left: 23.h,
-          right: 23.h,
-          bottom: 22.v,
         ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomImageView(
-              imagePath: ImageConstant.imgContrast,
-              height: 7.v,
-              width: 12.h,
-              margin: EdgeInsets.only(left: 112.h),
-            ),
-            SizedBox(height: 4.v),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/home_screen');
-                },child:
-                CustomImageView(
-                  imagePath: ImageConstant.imgHome,
-                  height: 28.adaptSize,
-                  width: 28.adaptSize,
-                  margin: EdgeInsets.symmetric(vertical: 12.v),),
-                  
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 52.h),
-                  child: GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/sessions_screen');
-                  },
-                  child: CustomIconButton(
-                    height: 52.adaptSize,
-                    width: 52.adaptSize,
-                    padding: EdgeInsets.all(5.h),
-                    decoration: IconButtonStyleHelper.outlineBlueGray,
-                    child: CustomImageView(
-                      imagePath: ImageConstant.imgHeroiconsOutli,),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 40.h),
-                   child: GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/screen_three_screen');
-                  },
-                  child: CustomIconButton(
-                    height: 52.adaptSize,
-                    width: 52.adaptSize,
-                    padding: EdgeInsets.all(10.h),
-                    decoration: IconButtonStyleHelper.outlineBlueGray1,
-                    child: CustomImageView(
-                      imagePath: ImageConstant.imgAkarIconsChatBubble,),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 40.h),
-                   child: GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/sessions_screen');
-                  },
-                  child: CustomIconButton(
-                    height: 52.adaptSize,
-                    width: 52.adaptSize,
-                    padding: EdgeInsets.all(12.h),
-                    decoration: IconButtonStyleHelper.outlineBlueGray,
-                    child: CustomImageView(
-                      imagePath: ImageConstant.imgUserOnprimarycontainer,),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
+        Expanded(
+          child: CustomImageView(
+            imagePath: ImageConstant.imgHeroiconsOutli,
+            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
+             onTap: () {
+              Navigator.pushNamed(context, '/sessions_screen');
+            },
+          ),
         ),
-      ),
-    );
-  }
+        Expanded(
+          child: CustomImageView(
+            imagePath: ImageConstant.imgAkarIconsChatBubble,
+            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
+             onTap: () {
+              Navigator.pushNamed(context, '/screen_three_screen');
+            },
+          ),
+        ),
+        Expanded(
+          child: CustomImageView(
+            imagePath: ImageConstant.imgUserOnprimarycontainer,
+            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
+             onTap: () {
+              Navigator.pushNamed(context, '');
+            },
+          ),
+        ),
+      ],
+    ),
+  );
 }
+}
+
+//   Widget _buildBottomBar(BuildContext context) {
+//     return Container(
+//       decoration: BoxDecoration(
+//         color: theme.colorScheme.onPrimaryContainer.withOpacity(1),
+//         boxShadow: [
+//           BoxShadow(
+//             color: appTheme.black90001.withOpacity(0.11),
+//             spreadRadius: 2.h,
+//             blurRadius: 2.h,
+//             offset: Offset(
+//               0,
+//               4,
+//             ),
+//           ),
+//         ],
+//       ),
+//       child: Padding(
+//         padding: EdgeInsets.only(
+//           left: 23.h,
+//           right: 23.h,
+//           bottom: 22.v,
+//         ),
+//         child: Column(
+//           mainAxisSize: MainAxisSize.min,
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: [
+//             CustomImageView(
+//               imagePath: ImageConstant.imgContrast,
+//               height: 7.v,
+//               width: 12.h,
+//               margin: EdgeInsets.only(left: 112.h),
+//             ),
+//             SizedBox(height: 4.v),
+//             Row(
+//               mainAxisAlignment: MainAxisAlignment.end,
+//               mainAxisSize: MainAxisSize.min,
+//               children: [
+//                 GestureDetector(
+//                 onTap: () {
+//                   Navigator.pushNamed(context, '/home_screen');
+//                 },child:
+//                 CustomImageView(
+//                   imagePath: ImageConstant.imgHome,
+//                   height: 28.adaptSize,
+//                   width: 28.adaptSize,
+//                   margin: EdgeInsets.symmetric(vertical: 12.v),),
+                  
+//                 ),
+//                 Padding(
+//                   padding: EdgeInsets.only(left: 52.h),
+//                   child: GestureDetector(
+//                   onTap: () {
+//                     Navigator.pushNamed(context, '/sessions_screen');
+//                   },
+//                   child: CustomIconButton(
+//                     height: 52.adaptSize,
+//                     width: 52.adaptSize,
+//                     padding: EdgeInsets.all(5.h),
+//                     decoration: IconButtonStyleHelper.outlineBlueGray,
+//                     child: CustomImageView(
+//                       imagePath: ImageConstant.imgHeroiconsOutli,),
+//                     ),
+//                   ),
+//                 ),
+//                 Padding(
+//                   padding: EdgeInsets.only(left: 40.h),
+//                    child: GestureDetector(
+//                   onTap: () {
+//                     Navigator.pushNamed(context, '/screen_three_screen');
+//                   },
+//                   child: CustomIconButton(
+//                     height: 52.adaptSize,
+//                     width: 52.adaptSize,
+//                     padding: EdgeInsets.all(10.h),
+//                     decoration: IconButtonStyleHelper.outlineBlueGray1,
+//                     child: CustomImageView(
+//                       imagePath: ImageConstant.imgAkarIconsChatBubble,),
+//                     ),
+//                   ),
+//                 ),
+//                 Padding(
+//                   padding: EdgeInsets.only(left: 40.h),
+//                    child: GestureDetector(
+//                   onTap: () {
+//                     Navigator.pushNamed(context, '/sessions_screen');
+//                   },
+//                   child: CustomIconButton(
+//                     height: 52.adaptSize,
+//                     width: 52.adaptSize,
+//                     padding: EdgeInsets.all(12.h),
+//                     decoration: IconButtonStyleHelper.outlineBlueGray,
+//                     child: CustomImageView(
+//                       imagePath: ImageConstant.imgUserOnprimarycontainer,),
+//                     ),
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }

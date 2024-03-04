@@ -40,6 +40,7 @@ class ImageConstant {
   static String imgEvaArrowBackFill = '$imagePath/img_eva_arrow_back_fill.svg';
 
   static String imgSettings = '$imagePath/img_settings.svg';
+  static String imgSettings2 = '$imagePath/img_settings_2.svg';
 
   static String imgIconsNavigation = '$imagePath/img_icons_navigation.svg';
 

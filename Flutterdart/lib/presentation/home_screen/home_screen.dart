@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                                     fontFamily: 'Epilogue',
                                     fontWeight: FontWeight.w400)))),
                     SizedBox(height: 19.v),
-                    _buildColumn(context),
+                    _buildColumn(context),                    
                     SizedBox(height: 26.v),
                     _buildStack(context),
                     SizedBox(height: 26.v),
@@ -114,22 +114,78 @@ class HomeScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildColumn(BuildContext context) {
-    return Align(
-        alignment: Alignment.centerRight,
-        child: SizedBox(
-            height: 84.v,
-            child: ListView.separated(
-                padding: EdgeInsets.only(left: 25.h),
-                scrollDirection: Axis.horizontal,
-                separatorBuilder: (context, index) {
-                  return SizedBox(width: 23.h);
-                },
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return ColumnItemWidget();
-                })));
-  }
+Widget _buildColumn(BuildContext context) {
+  return Align(
+    alignment: Alignment.centerRight,
+    child: SizedBox(
+      height: 84.v,
+      child: ListView.separated(
+        padding: EdgeInsets.only(left: 25.h),
+        scrollDirection: Axis.horizontal,
+        separatorBuilder: (context, index) {
+          return SizedBox(width: 23.h);
+        },
+        itemCount: 5,
+        itemBuilder: (context, index) {
+          switch (index) {
+            case 0:
+              return Container(
+                width: 84.v,
+                height: 84.v,
+                child: CustomImageView(
+                  imagePath: ImageConstant.imgRelax,
+                  height: 84.v,
+                  width: 84.v,
+                ),
+              );
+            case 1:
+              return Container(
+                width: 84.v,
+                height: 84.v,
+                child: CustomImageView(
+                  imagePath: ImageConstant.imgSettings2,
+                  height: 84.v,
+                  width: 84.v,
+                ),
+              );
+            case 2:
+              return Container(
+                width: 84.v,
+                height: 84.v,
+                child: CustomImageView(
+                  imagePath: ImageConstant.imgSettingsLime90001,
+                  height: 84.v,
+                  width: 84.v,
+                ),
+              );
+            case 3:
+              return Container(
+                width: 84.v,
+                height: 84.v,
+                child: CustomImageView(
+                  imagePath: ImageConstant.imgSettingsPrimarycontainer,
+                  height: 84.v,
+                  width: 84.v,
+                ),
+              );
+            case 4:
+              return Container(
+                width: 84.v,
+                height: 84.v,
+                child: CustomImageView(
+                  imagePath: ImageConstant.imgSettingsYellow900,
+                  height: 84.v,
+                  width: 84.v,
+                ),
+              );
+            default:
+              return Container();
+          }
+        },
+      ),
+    ),
+  );
+}
 
   /// Section Widget
   Widget _buildStack(BuildContext context) {
@@ -194,7 +250,7 @@ class HomeScreen extends StatelessWidget {
                                             fontWeight: FontWeight.w700)),
                                     CustomImageView(
                                         imagePath:
-                                            ImageConstant.imgIcOutlineDateRange,
+                                            ImageConstant.imgIcOutlineDateRange, //lightBrowncolor
                                         height: 17.adaptSize,
                                         width: 17.adaptSize,
                                         margin: EdgeInsets.only(left: 4.h))
@@ -380,24 +436,62 @@ class HomeScreen extends StatelessWidget {
         ]));
   }
 
-  /// Section Widget
-  Widget _buildBottomBar(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-            color: theme.colorScheme.onPrimaryContainer.withOpacity(1),
-            boxShadow: [
-              BoxShadow(
-                  color: appTheme.black90001.withOpacity(0.11),
-                  spreadRadius: 2.h,
-                  blurRadius: 2.h,
-                  offset: Offset(0, 4))
-            ]),
-        child: CustomImageView(
-            imagePath: ImageConstant.imgIconsNavigation,
-            height: 52.v,
-            width: 328.h,
-            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v)));
-  }
+Widget _buildBottomBar(BuildContext context) {
+  return Container(
+    decoration: BoxDecoration(
+      color: theme.colorScheme.onPrimaryContainer.withOpacity(1),
+      boxShadow: [
+        BoxShadow(
+          color: appTheme.black90001.withOpacity(0.11),
+          spreadRadius: 2.h,
+          blurRadius: 2.h,
+          offset: Offset(0, 4),
+        ),
+      ],
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Expanded(
+          child: CustomImageView(
+            imagePath: ImageConstant.imgHome,
+            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
+            onTap: () {
+              Navigator.pushNamed(context, '');
+            },
+          ),
+        ),
+        Expanded(
+          child: CustomImageView(
+            imagePath: ImageConstant.imgHeroiconsOutli,
+            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
+             onTap: () {
+              Navigator.pushNamed(context, '/sessions_screen');
+            },
+          ),
+        ),
+        Expanded(
+          child: CustomImageView(
+            imagePath: ImageConstant.imgAkarIconsChatBubble,
+            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
+             onTap: () {
+              Navigator.pushNamed(context, '/screen_three_screen');
+            },
+          ),
+        ),
+        Expanded(
+          child: CustomImageView(
+            imagePath: ImageConstant.imgUserOnprimarycontainer,
+            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
+             onTap: () {
+              Navigator.pushNamed(context, '');
+            },
+          ),
+        ),
+      ],
+    ),
+  );
+}
 
   /// Navigates to the screenThreeScreen when the action is triggered.
   onTapTxtGoodafternoon(BuildContext context) {
