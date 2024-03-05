@@ -1,3 +1,4 @@
+import 'package:treesa_s_application2/presentation/NavigationScreen/navigation_screen.dart';
 import 'package:treesa_s_application2/presentation/login_screen/login_screen.dart';
 import 'package:treesa_s_application2/presentation/mental_health_assessmentfourth_screen/mental_health_assessmentfourth_screen.dart';
 
@@ -484,7 +485,13 @@ Widget _buildBottomBar(BuildContext context) {
             imagePath: ImageConstant.imgUserOnprimarycontainer,
             margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
              onTap: () {
-              Navigator.pushNamed(context, '');
+                Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => NavigationScreen(currentIndex: 3),
+        ),
+        );
+         
             },
           ),
         ),

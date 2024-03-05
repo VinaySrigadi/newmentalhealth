@@ -12,7 +12,7 @@ class SessionsScreen extends StatelessWidget {
           key: key,
         );
 
-  List<String> dropdownItemList = [
+  final List<String> dropdownItemList = [
     "Item One",
     "Item Two",
     "Item Three",
@@ -272,7 +272,7 @@ class SessionsScreen extends StatelessWidget {
           ),
         );
       },
-      itemCount: 3,
+      itemCount: 1,
       itemBuilder: (context, index) {
         return UserprofileItemWidget();
       },
