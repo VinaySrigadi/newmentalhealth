@@ -1,6 +1,7 @@
 import 'dart:js';
 
 import 'package:flutter/material.dart';
+import 'package:treesa_s_application2/presentation/NavigationScreen/navigation_screen.dart';
 import 'package:treesa_s_application2/presentation/forgot_password/forgot_password_page_screen.dart';
 import 'package:treesa_s_application2/presentation/login_screen/login_screen.dart';
 import 'package:treesa_s_application2/presentation/mental_health_assessmenteight_screen/mental_health_assessmenteight_screen.dart';
@@ -41,23 +42,24 @@ static const String mentalHealthAssessmentwoScreen ='/mental_healthtwo_screen';
 static const String mentalHealthAssessmenthreeScreen ='/mental_health_three_screen';
 
 static const String mentalHealthAssessmentfifthScreen ='/mental_healthfifth_screen';
+static const String navigationScreen ='/navigation_screen';
 
   static Map<String, WidgetBuilder> routes = {
     loginScreen: (context) => LoginScreen(),
     signupScreen: (context) => SignupScreen(),
-    homeScreen: (context) => HomeScreen(username: 'username'),
+    homeScreen: (context) => const HomeScreen(username: 'username'),
     screenThreeScreen: (context) => ScreenThreeScreen(),
     sessionsScreen: (context) => SessionsScreen(),
-    appNavigationScreen: (context) => AppNavigationScreen(),
+    appNavigationScreen: (context) => const AppNavigationScreen(),
     forgotPasswordPageScreen: (context) => ForgotPasswordPageScreen(),
     resetPasswordPageScreen: (context) => ResetPasswordPageScreen(),
     mentalhealthassessmentfourteenScreen: (context) => MentalHealthAssessmentfourteenScreen(username: 'username'),
-    mentalHealthAssessmenteightScreen: (context) => MentalHealthAssessmenteightScreen(username: 'username'),
-  mentalHealthAssessmentoneScreen: (context) => MentalHealthAssessmentoneScreen(username: 'username', text: 'text', imagePath: 'imagePath',),
-    mentalHealthAssessmentwoScreen: (context) =>  MentalHealthAssessmentwoScreen(username: 'username'),
-  mentalHealthAssessmenthreeScreen: (context) => MentalHealthAssessmenthreeScreen(username: 'username'),
-  mentalHealthAssessmentfifthScreen: (context) => MentalHealthAssessmenfifthScreen(username: 'username'),
-  
+    mentalHealthAssessmenteightScreen: (context) => const MentalHealthAssessmenteightScreen(username: 'username'),
+  mentalHealthAssessmentoneScreen: (context) => const MentalHealthAssessmentoneScreen(username: 'username', text: 'text', imagePath: 'imagePath',),
+    mentalHealthAssessmentwoScreen: (context) =>  const MentalHealthAssessmentwoScreen(username: 'username'),
+  mentalHealthAssessmenthreeScreen: (context) => const MentalHealthAssessmenthreeScreen(username: 'username'),
+  mentalHealthAssessmentfifthScreen: (context) => const MentalHealthAssessmenfifthScreen(username: 'username'),
+   navigationScreen: (context) =>  NavigationScreen (currentIndex: 3)
 
   };
 }

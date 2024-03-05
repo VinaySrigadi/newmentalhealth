@@ -2,7 +2,7 @@ name: treesa_s_application2
 description: A new Flutter project.
 version: 1.0.0+1
 environment: 
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.17.6 <3.0.0'
 dependencies: 
   flutter: 
     sdk: flutter
@@ -12,9 +12,13 @@ dependencies:
   flutter_svg: ^2.0.9
   intl: ^0.18.0
   pin_code_fields: ^8.0.1
+  cupertino_icons: ^1.0.6
+  fl_chart: ^0.66.2
+  
 dev_dependencies: 
   flutter_test: 
     sdk: flutter
+  flutter_lints: ^3.0.1
 flutter: 
   uses-material-design: true
   assets: 
