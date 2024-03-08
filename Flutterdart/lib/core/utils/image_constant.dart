@@ -207,6 +207,18 @@ static String imgSolidMoodDepressed =
   static String imgSettingsLime90001 =
       '$imagePath/img_settings_lime_900_01.svg';
 
+    static String homeicondark ='$imagePath/1.svg';  
+    static String homeiconlight ='$imagePath/2.svg';  
+
+      static String videoicondark ='$imagePath/3.svg';  
+    static String videoiconlight ='$imagePath/4.svg';  
+
+      static String contacticondark ='$imagePath/5.svg';  
+    static String contacticonlight ='$imagePath/6.svg';  
+
+      static String messageicondark ='$imagePath/7.svg';  
+    static String messageiconlight ='$imagePath/8.svg';  
+
   // Common images
 
 }

@@ -1,8 +1,8 @@
 import 'package:treesa_s_application2/presentation/NavigationScreen/navigation_screen.dart';
-import 'package:treesa_s_application2/presentation/login_screen/login_screen.dart';
+// import 'package:treesa_s_application2/presentation/login_screen/login_screen.dart';
 import 'package:treesa_s_application2/presentation/mental_health_assessmentfourth_screen/mental_health_assessmentfourth_screen.dart';
 
-import '../home_screen/widgets/column_item_widget.dart';
+// import '../home_screen/widgets/column_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:treesa_s_application2/core/app_export.dart';
 import 'package:treesa_s_application2/widgets/app_bar/appbar_leading_circleimage.dart';
@@ -12,7 +12,7 @@ import 'package:treesa_s_application2/widgets/custom_elevated_button.dart';
 
 class HomeScreen extends StatelessWidget {
    final String username;
-  const HomeScreen({required this.username}) ;
+  const HomeScreen({super.key, required this.username}) ;
 
   @override
   Widget build(BuildContext context) {
@@ -130,7 +130,7 @@ Widget _buildColumn(BuildContext context) {
         itemBuilder: (context, index) {
           switch (index) {
             case 0:
-              return Container(
+              return SizedBox(
                 width: 84.v,
                 height: 84.v,
                 child: CustomImageView(
@@ -140,7 +140,7 @@ Widget _buildColumn(BuildContext context) {
                 ),
               );
             case 1:
-              return Container(
+              return SizedBox(
                 width: 84.v,
                 height: 84.v,
                 child: CustomImageView(
@@ -150,7 +150,7 @@ Widget _buildColumn(BuildContext context) {
                 ),
               );
             case 2:
-              return Container(
+              return SizedBox(
                 width: 84.v,
                 height: 84.v,
                 child: CustomImageView(
@@ -160,7 +160,7 @@ Widget _buildColumn(BuildContext context) {
                 ),
               );
             case 3:
-              return Container(
+              return SizedBox(
                 width: 84.v,
                 height: 84.v,
                 child: CustomImageView(
@@ -170,7 +170,7 @@ Widget _buildColumn(BuildContext context) {
                 ),
               );
             case 4:
-              return Container(
+              return SizedBox(
                 width: 84.v,
                 height: 84.v,
                 child: CustomImageView(
@@ -288,6 +288,7 @@ Widget _buildColumn(BuildContext context) {
       builder: (context) => MentalHealthAssessmentfourteenScreen(username: username),
     ),
     
+  // ignore: avoid_print
   );print(username); },
               buttonStyle: CustomButtonStyles.fillGray, onTap: () async{  },),
           CustomElevatedButton(
@@ -347,7 +348,7 @@ Widget _buildColumn(BuildContext context) {
               child: Card(
                   clipBehavior: Clip.antiAlias,
                   elevation: 0,
-                  margin: EdgeInsets.all(0),
+                  margin: const EdgeInsets.all(0),
                   color: appTheme.green400,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadiusStyle.roundedBorder20),
@@ -446,7 +447,7 @@ Widget _buildBottomBar(BuildContext context) {
           color: appTheme.black90001.withOpacity(0.11),
           spreadRadius: 2.h,
           blurRadius: 2.h,
-          offset: Offset(0, 4),
+          offset: const Offset(0, 4),
         ),
       ],
     ),
@@ -454,46 +455,62 @@ Widget _buildBottomBar(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Expanded(
-          child: CustomImageView(
-            imagePath: ImageConstant.imgHome,
-            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
-            onTap: () {
-              Navigator.pushNamed(context, '');
-            },
-          ),
+          child: 
+          IconButton(
+        icon: Icon(
+          Icons.home,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? Colors.white
+              : Colors.black,
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, '/home_screen');
+        },
+      ),
         ),
         Expanded(
-          child: CustomImageView(
-            imagePath: ImageConstant.imgHeroiconsOutli,
-            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
-             onTap: () {
-              Navigator.pushNamed(context, '/sessions_screen');
-            },
-          ),
+          child: IconButton(
+        icon: Icon(
+          Icons.video_library,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? Colors.white
+              : Colors.black,
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, '/sessions_screen');
+        },
+      ),
         ),
         Expanded(
-          child: CustomImageView(
-            imagePath: ImageConstant.imgAkarIconsChatBubble,
-            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
-             onTap: () {
-              Navigator.pushNamed(context, '/screen_three_screen');
-            },
-          ),
+          child: IconButton(
+        icon: Icon(
+          Icons.contact_page,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? Colors.white
+              : Colors.black,
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, '/screen_three_screen');
+        },
+      ),
         ),
         Expanded(
-          child: CustomImageView(
-            imagePath: ImageConstant.imgUserOnprimarycontainer,
-            margin: EdgeInsets.fromLTRB(24.h, 11.v, 23.h, 22.v),
-             onTap: () {
-                Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => NavigationScreen(currentIndex: 3),
-        ),
-        );
-         
-            },
-          ),
+          child:IconButton(
+  icon: Icon(
+    Icons.message,
+    color: Theme.of(context).brightness == Brightness.dark
+        ? Colors.white
+        : Colors.black,
+  ),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => NavigationScreen(currentIndex: 3),
+      ),
+    );
+  },
+),
         ),
       ],
     ),
